@@ -4,6 +4,7 @@
 #include <glut.h>
 
 int h0, k0, h1, k1;
+//Function to initialize the scene for drawing
 void Init() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glClearColor(0.0, 0.0, 0.0, 1.0);
@@ -11,6 +12,7 @@ void Init() {
 	gluOrtho2D(0, 500, 0, 500);
 }
 
+//Function to draw mid point line using Bresenham's line drawing algorithm
 void midpoint_line(int h0, int k0, int h1, int k1) {
 	int dx = h1 - h0;
 	int dy = k1 - k0;
@@ -116,7 +118,7 @@ void display_line() {
 	midpoint_line(h0, k0, h1, k1);
 	glutSwapBuffers();
 }
-
+//main_bresenham function takes arguments of x and y coordinates of the points from command line, using which the line is drawn
 void main_bresenham(int argc, char** argv)
 {
 	printf("Enter x1, y1, x2, y2");
