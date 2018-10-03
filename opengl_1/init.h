@@ -1,3 +1,5 @@
+//The functions in this header define the background colors and the orthographic projections of the windows for the different figures 
+
 #pragma once
 #include <glut.h>
 #include "Trees.h"

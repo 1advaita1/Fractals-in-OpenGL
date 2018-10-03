@@ -4,7 +4,6 @@
 #include "main.h"
 #include "draw.h"
 #include "init.h"
-#include "points.h"
 #include "Trees.h"
 #include "circles.h"
 #include "julia.h"
@@ -12,11 +11,12 @@
 #include "Bresenham_circle.h"
 
 
-void main(int argc, char **argv) {
+void main(int argc, char **argv) //Plot figure according to user's choice
+{
 	printf("0 for Bresenham, 1 for Trees, 2 for Circles, 3 for Dream Catcher, 4 for Yin Yang, 5 for Julia\n");
 	int option;
 	
-	scanf("%d", &option);
+	scanf("%d", &option); //Take input from user and call the respective functions from main.h 
 	if (option == 0) 
 	{
 		int sub_option;
