@@ -1,7 +1,34 @@
 ﻿  stdafx.cpp
   pacman.cpp
-c:\users\advaita\source\repos\opengl_1\opengl_1\pacman.cpp(44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\advaita\source\repos\opengl_1\opengl_1\pacman.cpp(51): warning C4101: 'k': unreferenced local variable
-c:\users\advaita\source\repos\opengl_1\opengl_1\pacman.cpp(121): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(11): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(13): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(18): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(32): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(34): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(53): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(55): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\trees.h(60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(17): warning C4101: 'k': unreferenced local variable
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(48): warning C4101: 'k': unreferenced local variable
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(90): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(91): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(94): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(95): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(95): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(100): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(103): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(103): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(107): warning C4244: 'argument': conversion from 'double' to 'GLint', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(110): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\advaita\source\repos\opengl_1\opengl_1\circles.h(110): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\advaita\source\repos\opengl_1\opengl_1\init.h(14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\advaita\source\repos\opengl_1\opengl_1\pacman.cpp(12): warning C4326: return type of 'main' should be 'int' instead of 'void'
   Generating Code...
   opengl_1.vcxproj -> C:\Users\advaita\source\repos\opengl_1\Debug\opengl_1.exe
