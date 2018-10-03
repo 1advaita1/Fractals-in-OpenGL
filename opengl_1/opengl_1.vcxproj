@@ -155,6 +155,8 @@
     <ClInclude Include="..\..\..\..\..\..\Program Files\Common Files\MSVC\freeglut\include\GL\freeglut_ext.h" />
     <ClInclude Include="..\..\..\..\..\..\Program Files\Common Files\MSVC\freeglut\include\GL\freeglut_std.h" />
     <ClInclude Include="..\..\..\..\..\..\Program Files\Common Files\MSVC\freeglut\include\GL\glut.h" />
+    <ClInclude Include="Bresenham.h" />
+    <ClInclude Include="Bresenham_circle.h" />
     <ClInclude Include="circles.h" />
     <ClInclude Include="draw.h" />
     <ClInclude Include="init.h" />

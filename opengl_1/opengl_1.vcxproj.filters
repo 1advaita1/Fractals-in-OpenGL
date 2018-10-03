@@ -54,6 +54,12 @@
     <ClInclude Include="julia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Bresenham.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bresenham_circle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

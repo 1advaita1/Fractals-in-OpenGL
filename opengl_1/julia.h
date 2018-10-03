@@ -1,45 +1,18 @@
+/*The method used in this code was inspired by the julia set implementation of Shibin K.Reeny. Visit her website for more information https://skr1986.wordpress.com/2012/11/12/julia-set-implementation-using-c-and-opengl/ */
+
 #pragma once
 #include <glut.h>
 #include <stdio.h>
-/*
-*defining a RGB struct to color the pixel
-*/
 float x0c, y0c;
 struct Type_rgb {
 	float r;
 	float g;
 	float b;
 };
-/*
-* pixel variable contain the value of the color pixel in
-* the picture.
-* pattern is a predefine set of color for a particular
-* value.
-*/
 struct Type_rgb pixels[841 * 1440], pattern[999];
 
-/*
-* function mandelbrotset find where the number is in
-* mandelbrotset or not and also assign a color to that
-* coordinate with that iteration pattern.
-*/
-
-void mandelbrotset()
+void juliaset()
 {
-	/*
-	* x0c :- is the real part of c value
-	*       will range from -2.5 to 1.1.
-	* y0c :- is the imaginary part of c value
-	*       will range from -1 to 1.1.
-	* x and y :- is the real and imaginary part of Zn.
-	* iteration :- is to keep control variable of the number
-	*       of iteration
-	* max_iteration :- maximum number of iteration
-	*        (which is one of bailout condition)
-	* loc :- represent the location pixel of the
-	*       current x,y coordinate.
-	*/
-
 	float  x, y, xtemp;
 	int iteration, max_iteration, loc = 0;
 	printf("\nstart");
@@ -49,11 +22,7 @@ void mandelbrotset()
 		for (x = -2.5; x < 1.1; x = x + 0.0025) {
 			xdum = x; ydum = y;
 			iteration = 0;
-			max_iteration = 10000;
-			/*
-			* (x*x) + (y*y) < (2*2) is the 2nd bailout condition ie
-			* the mandelbrot set is always within a radius of 2.
-			*/
+			max_iteration = 500;
 			while (((x*x) + (y*y) < (2 * 2)) && iteration < max_iteration) {
 				xtemp = (x*x) - (y*y) + x0c;
 				y = (2 * x*y) + y0c;
@@ -63,19 +32,11 @@ void mandelbrotset()
 			}
 			x = xdum; y = ydum;
 			if (iteration >= max_iteration - 1) {
-				/*
-				* setting color pixel to Mandelbrot set coordinate
-				*to black.
-				*/
 				pixels[loc].r = 0;
 				pixels[loc].g = 0;
 				pixels[loc].b = 0;
 			}
 			else {
-				/*
-				* setting color pixel to the reset of the coordinate by the
-				* pattern of no of iteration before bailout.
-				*/
 				pixels[loc].r = pattern[iteration].r;
 				pixels[loc].g = pattern[iteration].g;
 				pixels[loc].b = pattern[iteration].b;
@@ -86,13 +47,6 @@ void mandelbrotset()
 
 void Init_julia()
 {
-	/*
-	* Basic Opengl initialization.
-	* 1440 = (-2.5 - 1.1)/0.0025
-	*     here total x coordinate distance / no of division.
-	* 840 = (-1 - 1.1)/0.0025 +1
-	*     here total y coordinate distance / no of division.
-	*/
 	glViewport(0, 0, 1440, 841);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
@@ -102,9 +56,6 @@ void Init_julia()
 
 	int i;
 	float r, g, b;
-	/*
-	* Initializing all the pixels to white.
-	*/
 	for (i = 0; i < 841 * 1440; i++) {
 		pixels[i].r = 1;
 		pixels[i].g = 1;
@@ -112,9 +63,6 @@ void Init_julia()
 	}
 
 	i = 0;
-	/*
-	* Initializing all the pattern color till 9*9*9
-	*/
 	for (r = 0.1; r <= 0.9; r = r + 0.1)
 		for (g = 0.1; g <= 0.9; g = g + 0.1)
 			for (b = 0.1; b <= 0.9; b = b + 0.1) {
@@ -123,40 +71,25 @@ void Init_julia()
 				pattern[i].b = b;
 				i++;
 			}
-	/*
-	* Initializing the rest of the pattern as 9*9*9 is 729.
-	* and we need up to 999 pattern as the loop bailout
-	* condition is 1000.
-	*/
-
 	for (; i <= 999; i++) {
 		pattern[i].r = 1;
 		pattern[i].g = 1;
 		pattern[i].b = 1;
 	}
-	mandelbrotset();
+	juliaset();
 
 }
 
 void onDisplay()
 {
-	/*
-	* Clearing the initial buffer
-	*/
 	glClearColor(1, 1, 1, 0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	/*
-	* Draw the complete Mandelbrot set picture.
-	*/
 	glDrawPixels(1440, 841, GL_RGB, GL_FLOAT, pixels);
 	glutSwapBuffers();
 }
 
 void main_julia(int argc, char** argv)
 {
-	/*
-	* Here basic Opengl initialization.
-	*/
 	printf("\nEnter x and y co ordinates of c\n");
 	scanf("%f %f", &x0c, &y0c);
 	glutInit(&argc, argv);
@@ -166,13 +99,7 @@ void main_julia(int argc, char** argv)
 	glutCreateWindow("Julia_Set");
 
 	Init_julia();
-	/*
-	* connecting the Display function
-	*/
 	glutDisplayFunc(onDisplay);
-	/*
-	* starting the activities
-	*/
 	glutMainLoop();
 	return;
 }
