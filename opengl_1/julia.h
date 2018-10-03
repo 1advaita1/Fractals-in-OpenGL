@@ -1,4 +1,4 @@
-/*The method used in this code was inspired by the julia set implementation of Shibin K.Reeny. Visit her website for more information https://skr1986.wordpress.com/2012/11/12/julia-set-implementation-using-c-and-opengl/ */
+/*The method used in this code was inspired by the mandelbrot set implementation of Shibin K.Reeny. Visit her website for more information https://skr1986.wordpress.com/2012/11/12/mandelbrot-set-implementation-using-c-and-opengl/ */
 
 #pragma once
 #include <glut.h>

@@ -3,7 +3,6 @@ int xc = 450, yc = 450;
 #include <glut.h>
 #include "draw.h"
 #include "init.h"
-#include "points.h"
 #include "Trees.h"
 #include "circles.h"
 void main_tree(int argc, char **argv)

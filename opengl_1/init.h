@@ -1,6 +1,5 @@
 #pragma once
 #include <glut.h>
-#include "points.h"
 #include "Trees.h"
 #include "circles.h"
 
