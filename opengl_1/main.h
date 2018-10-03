@@ -1,11 +1,14 @@
+//The functions in this header define the window sizes of the different figures
+
 #pragma once
-int xc = 450, yc = 450;
+int xc = 450, yc = 450; //defines centre coordinates
 #include <glut.h>
 #include "draw.h"
 #include "init.h"
 #include "Trees.h"
 #include "circles.h"
-void main_tree(int argc, char **argv)
+
+void main_tree(int argc, char **argv) 
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);

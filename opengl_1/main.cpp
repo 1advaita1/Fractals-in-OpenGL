@@ -11,6 +11,7 @@
 #include "Bresenham_circle.h"
 
 
+
 /*
 	The main function prompts the user to choose the graphical image to be viewed.
 	The code from each graphical image is included in the form of header files which are linked with this cpp file
@@ -25,7 +26,6 @@
 		5 - Julia Fractal
 		6 - Kochcurve Fractal
 */
-
 
 void main(int argc, char **argv) //Plot figure according to user's choice
 {

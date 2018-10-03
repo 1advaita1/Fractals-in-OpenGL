@@ -162,13 +162,12 @@
     <ClInclude Include="init.h" />
     <ClInclude Include="julia.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="points.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Trees.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pacman.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
