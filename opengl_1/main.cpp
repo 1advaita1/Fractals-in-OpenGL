@@ -11,6 +11,22 @@
 #include "Bresenham_circle.h"
 
 
+
+/*
+	The main function prompts the user to choose the graphical image to be viewed.
+	The code from each graphical image is included in the form of header files which are linked with this cpp file
+	The user can choose from a range of images:
+		
+		0 followed by suboption 0 - Bresenham's line
+		0 followed by suboption 1 - Bresenham's circle
+		1 - Tree Fractal
+		2 - Circle Fractal
+		3 - Dream Catcher Fractal
+		4 - Ying Yang Fractal
+		5 - Julia Fractal
+		6 - Kochcurve Fractal
+*/
+
 void main(int argc, char **argv) //Plot figure according to user's choice
 {
 	printf("0 for Bresenham, 1 for Trees, 2 for Circles, 3 for Dream Catcher, 4 for Yin Yang, 5 for Julia\n");
@@ -33,6 +49,3 @@ void main(int argc, char **argv) //Plot figure according to user's choice
 	else return;
 	
 }
-
-
-

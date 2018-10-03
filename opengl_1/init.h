@@ -5,6 +5,10 @@
 #include "Trees.h"
 #include "circles.h"
 
+/*
+	The following Init functions are used to initialize the screen for drawing 
+	circle, dream catcher fractal and ying_yang fractal respectively
+*/
 
 void Init_circle()
 {
