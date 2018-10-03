@@ -4,6 +4,7 @@
 #include <glut.h>
 
 int r;
+//Function to initialize the scene for drawing
 void Init_bresenham_circle() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glClearColor(0.0, 0.0, 0.0, 1.0);
@@ -11,8 +12,14 @@ void Init_bresenham_circle() {
 	gluOrtho2D(-250, 250, -250, 250);
 }
 
+/*
+	Function to draw circle using Bresenham's mid point circle drawing algorithm.
+	The algorithm exploits 8 point symmetry of the circle, using which, only 
+	one among the 8 symmetical parts of the circle are drawn and rest are replicated from 
+	the first part.
+*/
 void circle_drawing(int r) {
-	// between y=x and x=0
+	// This algo draws the circle between y=x and x=0
 	int x = 0;
 	int y = r;
 	int d = 1 - r;
@@ -57,6 +64,11 @@ void display_circle() {
 	circle_drawing(r);
 	glutSwapBuffers();
 }
+
+/*
+	main_bresenham function asks the user to enter the radius (r) of the circle.
+	The radius of the circle is constrained to value <= 100
+*/
 
 void main_bresenham_circle(int argc, char** argv)
 {
