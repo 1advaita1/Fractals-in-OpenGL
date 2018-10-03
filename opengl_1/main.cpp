@@ -8,13 +8,12 @@
 #include "Trees.h"
 #include "circles.h"
 #include "julia.h"
-#include "kochcurve.h"
 #include "Bresenham.h"
 #include "Bresenham_circle.h"
 
 /*
 	The main function prompts the user to choose the graphical image to be viewed.
-	The code from each graphical image is included in the form of header files which are linked with this cpp file/
+	The code from each graphical image is included in the form of header files which are linked with this cpp file
 	The user can choose from a range of images:
 		
 		0 followed by suboption 0 - Bresenham's line
