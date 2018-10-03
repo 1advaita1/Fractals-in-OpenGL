@@ -4,12 +4,12 @@
 #include "main.h"
 #include "draw.h"
 #include "init.h"
-#include "points.h"
 #include "Trees.h"
 #include "circles.h"
 #include "julia.h"
 #include "Bresenham.h"
 #include "Bresenham_circle.h"
+
 
 /*
 	The main function prompts the user to choose the graphical image to be viewed.
@@ -25,11 +25,14 @@
 		5 - Julia Fractal
 		6 - Kochcurve Fractal
 */
-void main(int argc, char **argv) {
-	printf("Select from the following: \n0 for Bresenham,\n1 for Trees,\n2 for Circles,\n3 for Dream Catcher,\n4 for Yin Yang,\n5 for Julia,\n6 for Kochcurve\n");
+
+
+void main(int argc, char **argv) //Plot figure according to user's choice
+{
+	printf("0 for Bresenham, 1 for Trees, 2 for Circles, 3 for Dream Catcher, 4 for Yin Yang, 5 for Julia\n");
 	int option;
 	
-	scanf("%d", &option);
+	scanf("%d", &option); //Take input from user and call the respective functions from main.h 
 	if (option == 0) 
 	{
 		int sub_option;
@@ -43,10 +46,6 @@ void main(int argc, char **argv) {
 	else if (option == 3) main_dc(argc, argv);
 	else if (option == 4) main_yy(argc, argv);
 	else if (option == 5) main_julia(argc, argv);
-	else if (option == 6) main_kochcurve(argc, argv);
 	else return;
 	
 }
-
-
-
