@@ -161,7 +161,7 @@ int main(int argc, char** argv)
 	glutInitWindowSize(1440, 841);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("Mandelbrotset by SKR");
+	glutCreateWindow("Julia_Set");
 
 	Init();
 	/*
