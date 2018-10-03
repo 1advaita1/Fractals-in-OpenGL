@@ -158,6 +158,7 @@
     <ClInclude Include="circles.h" />
     <ClInclude Include="draw.h" />
     <ClInclude Include="init.h" />
+    <ClInclude Include="julia.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="points.h" />
     <ClInclude Include="stdafx.h" />

@@ -4,7 +4,7 @@
 void plot_point(int x, int y)
 {
 	glBegin(GL_POINTS);
-	glColor3i(0, 0, 0);
+	glColor3f(1, 0.4, 0.2);
 	glVertex2i(xc + x, yc + y);
 	//glVertex2i(xc + x, yc - y);
 	glVertex2i(xc + y, yc + x);
@@ -18,7 +18,7 @@ void plot_point(int x, int y)
 void plot_point_low(int x, int y)
 {
 	glBegin(GL_POINTS);
-	glColor3f(1, 1, 1);
+	glColor3f(1, 0.4, 0.2);
 	//glVertex2i(xc + x, yc + y);
 	glVertex2i(xc + x, yc - y);
 	//glVertex2i(xc + y, yc + x);
