@@ -118,7 +118,13 @@ void display_line() {
 	midpoint_line(h0, k0, h1, k1);
 	glutSwapBuffers();
 }
-//main_bresenham function takes arguments of x and y coordinates of the points from command line, using which the line is drawn
+
+/*
+	main_bresenham function asks the user to enter the values of
+	x and y coordinates of the points P(h0,k0) and Q(h1,k1) using which the line is drawn
+	starting from P to Q.
+*/
+
 void main_bresenham(int argc, char** argv)
 {
 	printf("Enter x1, y1, x2, y2");
