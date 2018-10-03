@@ -1,17 +1,18 @@
-// In windows: g++ -o kochcurve kochcurve.cpp -lfreeglut -lopengl32 -lglu32 -lwinmm -lgdi32
-#include <GL/glut.h>
+// Compiling in windows: g++ -o kochcurve kochcurve.cpp -lfreeglut -lopengl32 -lglu32 -lwinmm -lgdi32
+#include <GL/glut.h> // freeglut with MinGW compiler
 #include <bits/stdc++.h>
 
+// dimensions of screen
 float width = 1366;
 float height = 768;
-float l = 1366;
-int levels = 12;
+float l = 1366; // initial length of line segment
+int levels = 12; // no of times recursive fractal is called
 
 using namespace std;
 
-vector<pair<float, float> > lcorr;
 void draw_koch_curve(float l, int levels);
 
+// initialize opengl
 void Init() {
 	glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
@@ -19,6 +20,7 @@ void Init() {
 	gluOrtho2D(0, width, 0, height);
 }
 
+// handle key presses
 void handleKeypress(unsigned char key, int x, int y) {
     switch (key) {
         case 27: //Escape key
@@ -42,6 +44,7 @@ void handleKeypress(unsigned char key, int x, int y) {
     }
 }
 
+// draw a basic line
 void draw_a_line(float x0, float y0, float x1, float y1) {
     glLineWidth(1.5);
     glColor3f(0.0, 0.0, 1.0);
@@ -53,6 +56,7 @@ void draw_a_line(float x0, float y0, float x1, float y1) {
 
 }
 
+// recursive fractal function call which gets called `levels` number of times
 void handle_a_line(float x0, float y0, float x1, float y1, int levels) {
     if(levels<0) return;
     if(levels==0) {
@@ -76,6 +80,7 @@ void handle_a_line(float x0, float y0, float x1, float y1, int levels) {
     // draw_a_line(p1x, p1y, eqx, eqy);
 }
 
+// start drawing koch curve
 void draw_koch_curve(float l, int levels) {
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
@@ -91,6 +96,7 @@ void draw_koch_curve(float l, int levels) {
     }
 }
 
+// callback which gets called for every frame
 void onDisplay() {
 	draw_koch_curve(l, levels);
 	glutSwapBuffers();
